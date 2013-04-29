@@ -1,0 +1,16 @@
+2013-05-02 09:45  xia
+
+    * Update to CRAN version 1.3-6
+    * GPU version will be maintained only on R-Forge
+    * Future R-Forge versions: x.y-odd number
+    * Future CRAN versions: x.y-even number
+
+2013-04-29 15:25  xia
+
+    * Update to R-Forge version 1.3-5
+    * IMPORTANT CHANGE NOTE: bigRR.update() is now bigRR_update()
+      in order to avoid S3 method conflicts
+    * Corrected some typos in the documentation
+    * eigen() and chol() are done via svd() for stability
+    * Data objects documented
+    * Citation information updated

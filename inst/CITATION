@@ -1,0 +1,22 @@
+citHeader("To cite the package 'bigRR' or the method 'HEM' in publications use:")
+
+citEntry(entry="Article",
+         title = "A novel generalized ridge regression method for quantitative genetics",
+         author = personList(as.person("Xia Shen"),
+                             as.person("Moudud Alam"),
+                             as.person("Freddy Fikse"),
+                             as.person("Lars Ronnegard")),
+         journal      = "Genetics",
+         year         = "2013",
+         volume       = "193",
+         number       = "4",
+         pages        = "1255-1268",
+         url          = "http://www.genetics.org/content/193/4/1255.full",
+         
+         textVersion = 
+         paste("Xia Shen, Moudud Alam, Freddy Fikse and Lars Ronnegard (2013).", 
+               "A novel generalized ridge regression method for quantitative genetics.",
+               "Genetics, 193, 1255-1268",
+               "URL http://www.genetics.org/content/193/4/1255.full")
+)
+

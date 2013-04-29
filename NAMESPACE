@@ -1,0 +1,7 @@
+import("hglm")
+export("bigRR", "bigRR_update")
+
+S3method(bigRR, default)
+S3method(bigRR, formula)
+S3method(print, bigRR)
+S3method(plot, bigRR)
