@@ -1,5 +1,5 @@
-import("hglm")
-export("bigRR", "bigRR_update")
+import("utils", "hglm", "DatABEL")
+export("bigRR", "bigRR_update", "hugeRR", "hugeRR_update")
 
 S3method(bigRR, default)
 S3method(bigRR, formula)

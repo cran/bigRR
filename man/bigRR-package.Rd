@@ -11,9 +11,9 @@ The package fits large-scale (generalized) ridge regression for various distribu
 \tabular{ll}{
 Package: \tab bigRR\cr
 Type: \tab Package\cr
-Version: \tab 1.3-6\cr
-Date: \tab 2013-05-02\cr
-Depends: \tab R (>= 2.10.0), hglm\cr
+Version: \tab 1.3-8\cr
+Date: \tab 2013-05-08\cr
+Depends: \tab R (>= 2.10.0), utils, hglm, DatABEL\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }

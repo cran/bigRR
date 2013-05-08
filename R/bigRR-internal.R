@@ -125,3 +125,39 @@ c(403L, 10L, 626057186L, -143788204L, 327678551L, 101071437L,
 -629741177L, 212180336L, 562636814L, 1846674747L, -777672163L, 
 675901130L, -507229720L, -416178479L, -451085629L, -1138949683L
 )
+
+checkPackageVersionOnCRAN <- function(packageName,baseUrlCRAN="http://cran.r-project.org/web/packages/", 
+		timeout = 2)
+{
+	# change default timout
+	svtmo <- options("timeout")
+	options("timeout"=timeout)
+	# page to check is
+	pageAddress <- paste(baseUrlCRAN,packageName,sep="/")
+	# establish connection to the CRAN page of the package
+	suppressWarnings(
+			conn <- try( url(pageAddress) , silent=TRUE )
+	)
+	# if connection ok, read full page, store the results in pageContent; if failed, pageContent <- "try-error"
+	if ( all( class(conn) != "try-error") ) {
+		suppressWarnings(
+				pageContent <- try( readLines(conn) , silent=TRUE )
+		)
+		close(conn)
+	} else {
+		pageContent <- "try-error"
+		class(pageContent) <- "try-error"
+	}
+	# restore default timeout
+	options("timeout"=svtmo)
+	# if failed in reading (pageContent is "try-error"), return NULL
+	if (class(pageContent) == "try-error") return(NULL)
+	# parse the page and get string starting with "Package source:"
+	targetLine <- pageContent[grep("source:",pageContent)]
+	# split the string at "Package_" and ".tar.gz"; the element before the last will contain the version
+	splitPattern <- paste(packageName,"_|.tar.gz",sep="")
+	stringSplit <- strsplit(targetLine,splitPattern)
+	cranVersion <- stringSplit[[1]][length(stringSplit[[1]])-1]
+	# return version
+	return(cranVersion)
+}
