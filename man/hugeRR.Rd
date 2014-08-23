@@ -55,11 +55,12 @@ Ronnegard L, Shen X and Alam M (2010): \bold{hglm: A Package for Fitting Hierarc
 # --------------------------------------------- #  
 #              Arabidopsis example              #
 # --------------------------------------------- #  
-\dontrun{
+
 require(bigRR)
 data(Arabidopsis)
 X <- matrix(1, length(y), 1)
 
+\dontrun{
 # splitting the genotype data into two pieces and re-saving in DatABEL format
 #
 dimnames(Z) <- list(NULL, NULL)

@@ -69,11 +69,12 @@ Ronnegard L, Shen X and Alam M (2010): \bold{hglm: A Package for Fitting Hierarc
 # --------------------------------------------- #  
 #              Arabidopsis example              #
 # --------------------------------------------- #  
-\dontrun{
+
 require(bigRR)
 data(Arabidopsis)
 X <- matrix(1, length(y), 1)
 
+\dontrun{
 # fitting SNP-BLUP, i.e. a ridge regression on all the markers across the genome
 #
 SNP.BLUP.result <- bigRR(y = y, X = X, Z = scale(Z), 

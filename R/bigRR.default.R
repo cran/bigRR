@@ -45,7 +45,7 @@ function (formula = NULL, y, X, Z, data = NULL, shrink = NULL, weight = NULL,
 
 	############ Bending to allow for p<n problems -- Lars (Xia added SVD)
 	if (k < n) {
-		eigen.values <- svd(G)$d
+		eigen.values <- eigen(G)$values
 		min.eigen <- min(eigen.values)
 		if (min.eigen < tol.err) G <- G + diag(N)*(abs(min.eigen) + tol.err) 
 	}

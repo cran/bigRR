@@ -11,8 +11,8 @@ The package fits large-scale (generalized) ridge regression for various distribu
 \tabular{ll}{
 Package: \tab bigRR\cr
 Type: \tab Package\cr
-Version: \tab 1.3-8\cr
-Date: \tab 2013-05-08\cr
+Version: \tab 1.3-10\cr
+Date: \tab 2014-08-23\cr
 Depends: \tab R (>= 2.10.0), utils, hglm, DatABEL\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
@@ -20,7 +20,7 @@ LazyLoad: \tab yes\cr
 }
 \author{
 Authors: Xia Shen, Moudud Alam, Lars Ronnegard\cr
-Maintainer: Xia Shen <xia.shen@slu.se>
+Maintainer: Xia Shen <xia.shen@ki.se>
 }
 \references{
 Shen X, Alam M, Fikse F and Ronnegard L (2013). \bold{A novel generalized ridge regression method for quantitative genetics}. \emph{Genetics}, \bold{193}, 1255-1268.
